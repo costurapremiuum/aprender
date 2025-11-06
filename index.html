@@ -5,43 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Costura Premium</title>
   <style>
-    /* Reset básico */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-
-    body { background-color: #f9f7fb; color: #333; }
-
+    body { margin:0; font-family: Arial, sans-serif; background: #f9f7fb; color: #333; }
+    a { text-decoration: none; }
     header {
-      background: linear-gradient(90deg, #6a0dad, #b266ff);
+      background: linear-gradient(135deg, #6a0dad, #b266ff);
       color: #fff;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
+      background-image: url('https://images.unsplash.com/photo-1581092335120-d4e1d5ed8bfc?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
     }
-
-    header h1 { font-size: 2.5em; margin-bottom: 20px; }
-    header p { font-size: 1.2em; margin-bottom: 30px; }
-
+    header::after {
+      content:"";
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(106,13,173,0.6);
+    }
+    header h1, header p, header .btn-comprar { position: relative; z-index:1; }
+    header h1 { font-size: 2.8em; margin-bottom: 20px; }
+    header p { font-size: 1.3em; margin-bottom: 30px; }
     .btn-comprar {
       display: inline-block;
       padding: 15px 30px;
       background-color: #ff66b2;
       color: #fff;
       font-weight: bold;
-      text-decoration: none;
       border-radius: 8px;
       transition: 0.3s;
     }
-
     .btn-comprar:hover { background-color: #ff33a0; }
 
     .beneficios {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
       gap: 20px;
       background-color: #fff;
     }
-
     .beneficio {
       background-color: #f0e6ff;
       padding: 30px;
@@ -49,37 +53,54 @@
       flex: 1 1 250px;
       max-width: 300px;
       text-align: center;
+      transition: transform 0.3s;
     }
-
-    .beneficio h3 { margin-bottom: 15px; color: #6a0dad; }
+    .beneficio:hover { transform: translateY(-5px); }
+    .beneficio img { width: 60px; margin-bottom: 15px; }
+    .beneficio h3 { margin-bottom: 10px; color: #6a0dad; }
     .beneficio p { font-size: 0.95em; }
 
     .video {
       text-align: center;
       padding: 50px 20px;
-      background-color: #f9f7fb;
     }
-
     .video iframe {
       width: 100%;
       max-width: 600px;
       height: 340px;
       border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
+
+    .testimonios {
+      background-color: #f9f7fb;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .testimonio {
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px;
+      max-width: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .testimonio img { width: 80px; border-radius: 50%; margin-bottom: 15px; }
+    .testimonio p { font-size: 0.95em; }
 
     footer {
       text-align: center;
       padding: 50px 20px;
-      background: linear-gradient(90deg, #6a0dad, #b266ff);
+      background: linear-gradient(135deg, #6a0dad, #b266ff);
       color: #fff;
     }
-
     footer p { margin-bottom: 20px; font-size: 1.1em; }
   </style>
 </head>
 <body>
 
-  <!-- Header / Hero -->
+  <!-- Hero -->
   <header>
     <h1>Aprende costura desde casa y gana dinero con tu máquina</h1>
     <p>Conviértete en una experta en costura y empieza a generar ingresos con tus propias creaciones.</p>
@@ -89,14 +110,17 @@
   <!-- Beneficios -->
   <section class="beneficios">
     <div class="beneficio">
+      <img src="https://images.unsplash.com/photo-1598617122167-1dba351ad9ef?auto=format&fit=crop&w=80&q=80" alt="Aprende a tu ritmo">
       <h3>Aprende a tu ritmo</h3>
       <p>Accede a los contenidos cuando quieras y desde cualquier lugar.</p>
     </div>
     <div class="beneficio">
+      <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=80&q=80" alt="Soporte de instructores">
       <h3>Soporte de instructores</h3>
       <p>Recibe ayuda y consejos de profesionales de la costura.</p>
     </div>
     <div class="beneficio">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4435eb?auto=format&fit=crop&w=80&q=80" alt="Gana dinero">
       <h3>Convierte tu pasión en ingresos</h3>
       <p>Aprende técnicas para vender tus creaciones y generar dinero extra.</p>
     </div>
@@ -107,7 +131,19 @@
     <iframe src="https://www.youtube.com/embed/TU_VIDEO_AQUI" title="Video Costura Premium" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Segundo botón -->
+  <!-- Testimonios -->
+  <section class="testimonios">
+    <div class="testimonio">
+      <img src="https://images.unsplash.com/photo-1590080879591-64c5a0c0a5c1?auto=format&fit=crop&w=80&q=80" alt="Testimonio 1">
+      <p>"Gracias a Costura Premium ahora puedo trabajar desde casa y vender mis creaciones. ¡Me encanta!"</p>
+    </div>
+    <div class="testimonio">
+      <img src="https://images.unsplash.com/photo-1588776814546-338f14603c5b?auto=format&fit=crop&w=80&q=80" alt="Testimonio 2">
+      <p>"Aprender costura nunca fue tan fácil y divertido. ¡Recomiendo totalmente este curso!"</p>
+    </div>
+  </section>
+
+  <!-- Footer / Segundo botón -->
   <footer>
     <p>¡No esperes más para empezar!</p>
     <a class="btn-comprar" href="https://go.hotmart.com/Y27528309A?ap=f590&utm_source=facebook&utm_campaign=video_presentacion" target="_blank">Comprar Costura Premium</a>
