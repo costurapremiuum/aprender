@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso Costura Premium 🧵 | Recomendado por Silvana</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf7;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+header {
+  background: #ff7f50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+section {
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: auto;
+}
+button {
+  display: block;
+  background: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 1rem auto;
+}
+button:hover { background: #ff9966; }
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
+  padding: 1rem;
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Curso Costura Premium 🧵</h1>
+  <p>Aprende costura desde cero con Premium Academy</p>
+</header>
+
+<section>
+  <img src="https://premiumacademy.online/wp-content/uploads/2024/03/costura-premium.jpg" alt="Curso Costura Premium">
+  <h2>¿Qué aprenderás?</h2>
+  <ul>
+    <li>180 clases paso a paso</li>
+    <li>Aprende desde cero sin experiencia</li>
+    <li>Certificado al finalizar</li>
+    <li>Acceso de por vida al contenido</li>
+  </ul>
+
+  <h3>💬 Silvana te cuenta:</h3>
+  <p>
+    Este curso cambió mi forma de ver la costura. Si te gusta crear prendas o sueñas con tener tu propio taller, te lo recomiendo totalmente.
+  </p>
+
+  <button onclick="window.open('https://go.hotmart.com/Y27528309A?ap=0320&src=silvana_html', '_blank')">
+    🔥 Inscribirme ahora por $89.900 CLP
+  </button>
+
+  <p style="text-align:center; font-size:0.9rem;">
+    💸 Garantía de 7 días — acceso inmediato al curso.
+  </p>
+</section>
+
+<footer>
+  <p>Recomendado por Silvana © 2025</p>
+</footer>
+
+</body>
+</html>
