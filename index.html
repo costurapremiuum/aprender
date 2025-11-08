@@ -1,366 +1,84 @@
-<!DOCTYPE html>
+<!-- LANDING: clase gratis -->
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costura Premium 🧵 - Tu Curso Online Definitivo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos Generales y Reseteo */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5; /* Un gris muy suave */
-            color: #333;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Sección Hero / Encabezado */
-        .hero {
-            background-color: #ffffff;
-            padding: 60px 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-        }
-
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.2em;
-            color: #2c3e50; /* Azul oscuro */
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .hero h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8em;
-            color: #3498db; /* Azul brillante */
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            border-radius: 12px;
-            margin-top: 30px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Sección Call to Action (CTA) */
-        .cta-section {
-            background-color: #e8f6fd; /* Azul muy claro */
-            padding: 40px 20px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .cta-section h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #2c3e50;
-            font-size: 2em;
-            margin-bottom: 25px;
-        }
-
-        .main-button {
-            display: inline-block;
-            background-color: #f39c12; /* Naranja dorado para destacar */
-            color: white;
-            padding: 18px 40px;
-            font-size: 1.8em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        .main-button:hover {
-            background-color: #e67e22; /* Naranja más oscuro al pasar el ratón */
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(243, 156, 18, 0.5);
-        }
-
-        /* Sección Beneficios / Módulos */
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: #f39c12;
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .benefit-item {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .benefit-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .benefit-item img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            background-color: #ecf0f1;
-            padding: 10px;
-        }
-
-        .benefit-item h4 {
-            font-family: 'Poppins', sans-serif;
-            color: #3498db;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .benefit-item p {
-            color: #555;
-            font-size: 1em;
-        }
-
-        /* Sección Testimonios */
-        .testimonials-section {
-            background-color: #ecf0f1; /* Gris claro */
-            padding: 60px 20px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .testimonial-card {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-            font-style: italic;
-            color: #555;
-            position: relative;
-        }
-        .testimonial-card::before {
-            content: '❝';
-            font-size: 4em;
-            color: #bdc3c7;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            opacity: 0.6;
-            line-height: 1;
-        }
-        .testimonial-card p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            padding-top: 20px; /* Para no chocar con el " */
-        }
-        .testimonial-card strong {
-            display: block;
-            margin-top: 15px;
-            font-style: normal;
-            color: #3498db;
-            font-size: 1.1em;
-        }
-
-        /* Sección Contacto / WhatsApp */
-        .contact-section {
-            padding: 40px 20px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-        .contact-section h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2em;
-            color: #2c3e50;
-            margin-bottom: 25px;
-        }
-        .whatsapp-button {
-            background-color: #25D366; /* Verde WhatsApp */
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.4em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
-        }
-        .whatsapp-button:hover {
-            background-color: #1DA851;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 50px;
-            padding: 30px 20px;
-            background-color: #2c3e50; /* Azul oscuro del header */
-            color: #ecf0f1;
-            font-size: 0.9em;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            text-align: center;
-        }
-
-        /* Animación para el botón principal */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-
-        /* Media Queries para Responsividad */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            .hero h2 {
-                font-size: 1.4em;
-            }
-            .main-button {
-                font-size: 1.5em;
-                padding: 15px 30px;
-            }
-            .section-title {
-                font-size: 2em;
-            }
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonial-card {
-                padding: 25px;
-            }
-            .whatsapp-button {
-                font-size: 1.2em;
-                padding: 12px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-            .hero h2 {
-                font-size: 1.2em;
-            }
-            .main-button {
-                font-size: 1.3em;
-                padding: 12px 25px;
-            }
-            .section-title {
-                font-size: 1.8em;
-            }
-            .benefit-item img {
-                width: 60px;
-                height: 60px;
-            }
-            .testimonial-card p {
-                font-size: 1em;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clase Gratis • Costura Premium — Silvana</title>
+  <meta name="description" content="Clase gratis: aprende a preparar y coser tu primera prenda con resultados profesionales.">
+  <style>
+    /* Simple, limpio — puedes pegar en HitHub */
+    :root{--pink:#ff2d78;--bg:#fff}
+    body{font-family:Inter,system-ui,Arial;background:var(--bg);margin:0;color:#222}
+    .wrap{max-width:900px;margin:32px auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center}
+    .cta{background:var(--pink);color:white;padding:16px 20px;border-radius:10px;text-decoration:none;display:inline-block}
+    .card{background:#f8f8fb;padding:18px;border-radius:12px}
+    input,button{font-size:16px;padding:12px;border-radius:8px;border:1px solid #ddd}
+    .small{font-size:14px;color:#666}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <section class="hero">
-            <h1>¡Desbloquea tu Potencial en la Costura!</h1>
-            <h2>Conviértete en un Experto desde Cero con el Curso Online "Costura Premium"</h2>
-            <p>Aprende las técnicas secretas de los profesionales, diseña tus propias prendas y transforma tu pasión en una fuente de ingresos real.</p>
-            <img src="URL_DE_TU_IMAGEN_HEROE_AQUI" alt="Banner Principal Costura Premium" class="hero-image">
-        </section>
+  <div class="wrap">
+    <header>
+      <h1>Clase gratis: Cómo preparar y coser una prenda que parezca hecha por una profesional</h1>
+    </header>
 
-        <section class="cta-section">
-            <h3>¿Listo para Crear tus Propias Obras Maestras?</h3>
-            <a href="TU_HOTLINK_AQUI?src=github_btn_principal" target="_blank" class="main-button">
-                ¡Sí, Quiero Inscribirme Ahora!
-            </a>
-            <p style="margin-top: 20px; font-size: 1.1em; color: #555;">Acceso instantáneo, clases de por vida y certificado de finalización.</p>
-        </section>
+    <section class="hero">
+      <div>
+        <p class="small">En 20 minutos te muestro pasos claros, trucos y el error que todas cometen al cortar la tela.</p>
+        <ul>
+          <li>Preparación de la tela</li>
+          <li>Técnicas para costuras limpias</li>
+          <li>Consejo para terminar y ajustar la prenda</li>
+        </ul>
 
-        <section class="benefits">
-            <h2 class="section-title">Lo Que Vas a Dominar con Costura Premium</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <img src="URL_IMAGEN_BENEFICIO1_AQUI" alt="Patrones y Medidas">
-                    <h4>Patronaje y Medidas Perfectas</h4>
-                    <p>Aprende a tomar medidas con precisión, crear patrones desde cero y adaptarlos a cualquier talla o diseño. ¡Nunca más una prenda que no ajuste!</p>
-                </div>
-                <div class="benefit-item">
-                    <img src="URL_IMAGEN_BENEFICIO2_AQUI" alt="Técnicas de Confección">
-                    <h4>Técnicas de Confección Avanzadas</h4>
-                    <p>Desde los puntos básicos hasta acabados profesionales: dobladillos invisibles, cierres impecables, cuellos perfectos y mucho más. ¡Haz que tus prendas luzcan de diseñador!</p>
-                </div>
-                <div class="benefit-item">
-                    <img src="URL_IMAGEN_BENEFICIO3_AQUI" alt="Emprender con Costura">
-                    <h4>Emprende Tu Negocio de Costura</h4>
-                    <p>Te guiaremos para que puedas transformar tu habilidad en una fuente de ingresos. Consejos sobre cómo vender tus creaciones, fijar precios y conseguir clientes.</p>
-                </div>
-                <div class="benefit-item">
-                    <img src="URL_IMAGEN_BENEFICIO4_AQUI" alt="Acceso de Por Vida">
-                    <h4>Acceso de Por Vida y Actualizaciones</h4>
-                    <p>Estudia a tu propio ritmo, desde cualquier dispositivo y sin prisas. Recibirás todas las actualizaciones del curso sin costo adicional. ¡Tu conocimiento crece contigo!</p>
-                </div>
-            </div>
-        </section>
+        <div class="card">
+          <form id="leadForm">
+            <label>Tu nombre</label><br/>
+            <input name="name" id="name" required /><br/><br/>
+            <label>Email</label><br/>
+            <input name="email" id="email" type="email" required /><br/><br/>
+            <input type="hidden" id="source" value="landing_clase_gratis">
+            <button id="submitBtn" class="cta" type="submit">Quiero la clase gratis</button>
+            <p class="small">Solo toma 30 segundos. Prometo no spamearte.</p>
+          </form>
+        </div>
+      </div>
 
-        <section class="testimonials-section">
-            <h2 class="section-title">Lo que Dicen Nuestros Estudiantes</h2>
-            <div class="testimonial-card">
-                <p>"¡Increíble! Pensé que era imposible aprender costura online, pero el curso Costura Premium superó mis expectativas. Ya estoy haciendo ropa para toda mi familia. ¡Totalmente recomendado!"</p>
-                <strong>— Ana M., Alumna Satisfecha</strong>
-            </div>
-        </section>
+      <div>
+        <!-- Video placeholder -->
+        <div style="background:#000;height:240px;border-radius:10px;color:white;display:flex;align-items:center;justify-content:center">
+          Video preview
+        </div>
+        <p class="small">Minilección + PDF: lista de materiales.</p>
+      </div>
+    </section>
 
-        <section class="contact-section">
-            <h3>¿Tienes Preguntas Antes de Inscribirte?</h3>
-            <p>Nuestro equipo de soporte está listo para ayudarte a resolver cualquier duda sobre el curso o tu inscripción.</p>
-            <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola%2C%20vengo%20de%20la%20pagina%20de%20Costura%20Premium%20y%20quiero%20saber%20mas%20del%20curso." 
-               target="_blank" 
-               class="whatsapp-button">
-                Chatear con un Asesor (WhatsApp)
-            </a>
-        </section>
-    </div>
+    <footer style="margin-top:20px" class="small">Si quieres comprar directo: <a href="AFFILIATE_LINK" class="small">Ir a Costura Premium</a></footer>
+  </div>
 
-    <footer>
-        <p>&copy; 2023 Costura Industrial. Todos los derechos reservados.</p>
-    </footer>
+  <script>
+    /* Simple submit -> webhook (Zapier/Make/Email provider) */
+    document.getElementById('leadForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      // Replace FORM_ENDPOINT with tu webhook
+      const FORM_ENDPOINT = "FORM_ENDPOINT";
+      try {
+        await fetch(FORM_ENDPOINT, {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({name,email,source:document.getElementById('source').value})
+        });
+        // Redirige a thank-you con UTM
+        location.href = '/gracias?utm_source=landing&utm_medium=clasegratis';
+      } catch(err) {
+        alert('Ocurrió un error. Intenta de nuevo.');
+      }
+    });
+  </script>
 </body>
 </html>
