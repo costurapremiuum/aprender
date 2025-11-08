@@ -1,145 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Costura Premium</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffe6f2; /* Rosa pastel */
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 1.8em;
-      color: #e75480; /* Rosa fuerte */
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1em;
-      margin: 10px 0 25px;
-    }
-
-    .timer-container {
-      background-color: #fff;
-      border-radius: 12px;
-      display: inline-block;
-      padding: 15px 25px;
-      margin-bottom: 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-
-    .timer-label {
-      font-size: 1em;
-      color: #e75480;
-      margin-bottom: 5px;
-    }
-
-    .timer {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #e75480;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #e75480;
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 40px;
-      border-radius: 30px;
-      font-size: 1.2em;
-      font-weight: bold;
-      transition: 0.3s ease;
-      margin-top: 10px;
-    }
-
-    .cta-button:hover {
-      background-color: #ff8bb6;
-      transform: scale(1.05);
-    }
-
-    .social-icons {
-      margin-top: 40px;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      display: inline-block;
-      transition: transform 0.4s ease;
-    }
-
-    .social-icons a:hover {
-      transform: rotate(360deg);
-    }
-
-    .social-icons img {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Costura Premium: Tu Guía Definitiva</title>
 </head>
 <body>
+    <h1>¡Empieza a Coser Hoy Mismo!</h1>
+    <p>¿Cansada de tutoriales que no llevan a nada? El curso Costura Premium te da la ruta de 0 a Experto.</p>
 
-  <h1>Conviértete en una costurera profesional en una semana</h1>
-  <p>Aprende desde cero y crea tus primeras prendas profesionales con <strong>Costura Premium</strong>.</p>
+    <a href="TU_HOTLINK_AQUI?src=github_btn_principal" 
+       target="_blank" 
+       style="display: block; padding: 15px; background-color: #007bff; color: white; text-align: center; text-decoration: none; margin-top: 20px;">
+        ✅ Quiero Acceder al Curso Ahora
+    </a>
 
-  <div class="timer-container">
-    <div class="timer-label">🎀 Oferta termina en:</div>
-    <div class="timer" id="countdown">00:00:00</div>
-  </div>
-
-  <a href="https://go.hotmart.com/Y27528309A?pad=https://www.youtube.com/@PremiumAcademy" class="cta-button">Inscríbete ahora</a>
-
-  <div class="social-icons">
-    <a href="https://www.instagram.com/costuraindustrial_/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
-    <a href="https://web.facebook.com/Costurindustrial?locale=es_LA" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook"></a>
-    <a href="https://www.youtube.com/@PremiumAcademy" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-    <a href="https://www.tiktok.com/@costurando_ando" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
-  </div>
-
-  <footer>
-    © 2025 Costurando Ando. Todos los derechos reservados.
-  </footer>
-
-  <script>
-    function actualizarContador() {
-      const ahora = new Date();
-      const fin = new Date();
-      fin.setHours(23, 59, 59, 999); // Finaliza a las 23:59
-
-      const diff = fin - ahora;
-      if (diff <= 0) {
-        document.getElementById('countdown').innerText = "00:00:00";
-        setTimeout(actualizarContador, 1000);
-        return;
-      }
-
-      const horas = Math.floor(diff / (1000 * 60 * 60));
-      const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById('countdown').innerText =
-        (horas < 10 ? "0" : "") + horas + ":" +
-        (minutos < 10 ? "0" : "") + minutos + ":" +
-        (segundos < 10 ? "0" : "") + segundos;
-
-      setTimeout(actualizarContador, 1000);
-    }
-
-    actualizarContador();
-  </script>
+    <p style="margin-top: 30px;">¡Más de 500 alumnas ya están transformando su talento!</p>
 </body>
 </html>
