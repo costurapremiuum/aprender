@@ -3,211 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costura Premium 🧵 - Transforma tu Pasión en Habilidad Profesional</title>
+    <title>Costura Premium 🧵 - Tu Curso Online Definitivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Generales */
+        /* Estilos Generales y Reseteo */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-color: #f0f2f5; /* Un gris muy suave */
             color: #333;
             line-height: 1.6;
             text-align: center;
         }
 
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
 
-        /* Encabezado */
-        h1 {
-            color: #4CAF50; /* Verde vibrante */
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        /* Sección Hero / Encabezado */
+        .hero {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
         }
 
-        h2 {
-            color: #555;
-            font-size: 1.5em;
-            margin-top: 0;
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.2em;
+            color: #2c3e50; /* Azul oscuro */
+            margin-bottom: 15px;
+            line-height: 1.2;
         }
 
-        /* Imagen Principal */
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8em;
+            color: #3498db; /* Azul brillante */
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
         .hero-image {
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
             height: auto;
-            border-radius: 8px;
-            margin: 25px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* Puntos de Venta */
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
+        /* Sección Call to Action (CTA) */
+        .cta-section {
+            background-color: #e8f6fd; /* Azul muy claro */
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
-        .feature-item {
-            flex: 1;
-            min-width: 280px;
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            text-align: left;
+        .cta-section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 25px;
         }
 
-        .feature-item h3 {
-            color: #4CAF50;
-            margin-top: 0;
-            font-size: 1.3em;
-            display: flex;
-            align-items: center;
-        }
-        .feature-item h3::before {
-            content: '✨'; /* Icono antes del título */
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
-        /* Botones CTA */
-        .cta-button {
+        .main-button {
             display: inline-block;
-            background-color: #FF5722; /* Naranja vibrante para el botón principal */
+            background-color: #f39c12; /* Naranja dorado para destacar */
             color: white;
-            padding: 18px 35px;
-            font-size: 1.6em;
+            padding: 18px 40px;
+            font-size: 1.8em;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 50px; /* Botón más redondeado */
-            margin: 30px 10px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 6px 15px rgba(255, 87, 34, 0.4);
-            animation: pulse 2s infinite; /* Animación de pulsación */
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
+            animation: pulse 2s infinite;
         }
 
-        .cta-button:hover {
-            background-color: #E64A19;
-            transform: translateY(-3px);
+        .main-button:hover {
+            background-color: #e67e22; /* Naranja más oscuro al pasar el ratón */
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(243, 156, 18, 0.5);
         }
 
-        .whatsapp-button {
-            background-color: #25D366; /* Verde WhatsApp */
-            padding: 12px 25px;
-            font-size: 1.2em;
-            border-radius: 30px;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        /* Sección Beneficios / Módulos */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #f39c12;
+            margin: 15px auto 0;
+            border-radius: 2px;
         }
 
-        .whatsapp-button:hover {
-            background-color: #1DA851;
-            transform: translateY(-2px);
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
-        /* Testimonio (Opcional) */
-        .testimonial {
-            background-color: #e0f2f7; /* Azul claro */
-            padding: 25px;
-            border-left: 5px solid #00BCD4;
-            margin: 40px auto;
-            font-style: italic;
-            color: #444;
-            max-width: 600px;
-            border-radius: 8px;
+        .benefit-item {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .testimonial p {
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+            padding: 10px;
+        }
+
+        .benefit-item h4 {
+            font-family: 'Poppins', sans-serif;
+            color: #3498db;
+            font-size: 1.5em;
             margin-bottom: 10px;
         }
-        .testimonial strong {
+
+        .benefit-item p {
+            color: #555;
+            font-size: 1em;
+        }
+
+        /* Sección Testimonios */
+        .testimonials-section {
+            background-color: #ecf0f1; /* Gris claro */
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #555;
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '❝';
+            font-size: 4em;
+            color: #bdc3c7;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.6;
+            line-height: 1;
+        }
+        .testimonial-card p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            padding-top: 20px; /* Para no chocar con el " */
+        }
+        .testimonial-card strong {
             display: block;
             margin-top: 15px;
             font-style: normal;
-            color: #00796B;
+            color: #3498db;
+            font-size: 1.1em;
+        }
+
+        /* Sección Contacto / WhatsApp */
+        .contact-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .contact-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        .whatsapp-button {
+            background-color: #25D366; /* Verde WhatsApp */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-button:hover {
+            background-color: #1DA851;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            background-color: #2c3e50; /* Azul oscuro del header */
+            color: #ecf0f1;
+            font-size: 0.9em;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: center;
         }
 
         /* Animación para el botón principal */
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
 
         /* Media Queries para Responsividad */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8em;
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
             }
-            h2 {
+            .hero h2 {
+                font-size: 1.4em;
+            }
+            .main-button {
+                font-size: 1.5em;
+                padding: 15px 30px;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonial-card {
+                padding: 25px;
+            }
+            .whatsapp-button {
+                font-size: 1.2em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero h2 {
                 font-size: 1.2em;
             }
-            .cta-button {
+            .main-button {
                 font-size: 1.3em;
-                padding: 15px 25px;
+                padding: 12px 25px;
             }
-            .feature-item {
-                flex-basis: 100%;
+            .section-title {
+                font-size: 1.8em;
             }
-            .container {
-                margin: 10px;
-                padding: 15px;
+            .benefit-item img {
+                width: 60px;
+                height: 60px;
+            }
+            .testimonial-card p {
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¡Domina el Arte de la Costura desde Cero!</h1>
-        <h2>Tu Camino a la Costura Profesional y Creativa con "Costura Premium" ✂️</h2>
+        <section class="hero">
+            <h1>¡Desbloquea tu Potencial en la Costura!</h1>
+            <h2>Conviértete en un Experto desde Cero con el Curso Online "Costura Premium"</h2>
+            <p>Aprende las técnicas secretas de los profesionales, diseña tus propias prendas y transforma tu pasión en una fuente de ingresos real.</p>
+            <img src="URL_DE_TU_IMAGEN_HEROE_AQUI" alt="Banner Principal Costura Premium" class="hero-image">
+        </section>
 
-        <p>¿Siempre soñaste con crear tus propias prendas o incluso iniciar tu negocio de costura? Con el curso Costura Premium, transformarás tu pasión en una habilidad rentable y gratificante.</p>
+        <section class="cta-section">
+            <h3>¿Listo para Crear tus Propias Obras Maestras?</h3>
+            <a href="TU_HOTLINK_AQUI?src=github_btn_principal" target="_blank" class="main-button">
+                ¡Sí, Quiero Inscribirme Ahora!
+            </a>
+            <p style="margin-top: 20px; font-size: 1.1em; color: #555;">Acceso instantáneo, clases de por vida y certificado de finalización.</p>
+        </section>
 
-        <img src="URL_DE_TU_IMAGEN_AQUI" alt="Muestra de Costura Premium o Prenda Terminada" class="hero-image">
-
-        <div class="features">
-            <div class="feature-item">
-                <h3>Aprende a tu Ritmo</h3>
-                <p>Clases en video fáciles de seguir, desde los conceptos básicos hasta técnicas avanzadas. ¡Ideal para principiantes y para quienes buscan perfeccionar su técnica!</p>
+        <section class="benefits">
+            <h2 class="section-title">Lo Que Vas a Dominar con Costura Premium</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <img src="URL_IMAGEN_BENEFICIO1_AQUI" alt="Patrones y Medidas">
+                    <h4>Patronaje y Medidas Perfectas</h4>
+                    <p>Aprende a tomar medidas con precisión, crear patrones desde cero y adaptarlos a cualquier talla o diseño. ¡Nunca más una prenda que no ajuste!</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="URL_IMAGEN_BENEFICIO2_AQUI" alt="Técnicas de Confección">
+                    <h4>Técnicas de Confección Avanzadas</h4>
+                    <p>Desde los puntos básicos hasta acabados profesionales: dobladillos invisibles, cierres impecables, cuellos perfectos y mucho más. ¡Haz que tus prendas luzcan de diseñador!</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="URL_IMAGEN_BENEFICIO3_AQUI" alt="Emprender con Costura">
+                    <h4>Emprende Tu Negocio de Costura</h4>
+                    <p>Te guiaremos para que puedas transformar tu habilidad en una fuente de ingresos. Consejos sobre cómo vender tus creaciones, fijar precios y conseguir clientes.</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="URL_IMAGEN_BENEFICIO4_AQUI" alt="Acceso de Por Vida">
+                    <h4>Acceso de Por Vida y Actualizaciones</h4>
+                    <p>Estudia a tu propio ritmo, desde cualquier dispositivo y sin prisas. Recibirás todas las actualizaciones del curso sin costo adicional. ¡Tu conocimiento crece contigo!</p>
+                </div>
             </div>
-            <div class="feature-item">
-                <h3>Crea Diseños Únicos</h3>
-                <p>Descubre cómo tomar medidas, cortar patrones y confeccionar prendas exclusivas que reflejen tu estilo. ¡Imagina vestir tus propias creaciones!</p>
+        </section>
+
+        <section class="testimonials-section">
+            <h2 class="section-title">Lo que Dicen Nuestros Estudiantes</h2>
+            <div class="testimonial-card">
+                <p>"¡Increíble! Pensé que era imposible aprender costura online, pero el curso Costura Premium superó mis expectativas. Ya estoy haciendo ropa para toda mi familia. ¡Totalmente recomendado!"</p>
+                <strong>— Ana M., Alumna Satisfecha</strong>
             </div>
-            <div class="feature-item">
-                <h3>Oportunidad de Emprender</h3>
-                <p>Conviértete en una costurera profesional, emprende tu propio negocio desde casa y genera ingresos extra haciendo lo que amas.</p>
-            </div>
-        </div>
+        </section>
 
-        <a href="TU_HOTLINK_AQUI?src=github_btn_principal" 
-           target="_blank" 
-           class="cta-button">
-           ¡Quiero Iniciar mi Transformación en la Costura Ahora!
-        </a>
-
-        <div class="testimonial">
-            <p>"Nunca pensé que podría coser tan bien. Gracias a Costura Premium, ahora hago ropa para toda mi familia y ¡hasta me hacen pedidos! Es la mejor inversión que he hecho."</p>
-            <strong>— María G., Alumna Satisfecha</strong>
-        </div>
-
-        <p>¿Tienes dudas o necesitas más información antes de inscribirte?</p>
-        <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola%2C%20vengo%20de%20tu%20pagina%20de%20costura%20y%20quiero%20saber%20mas%20del%20curso%20Costura%20Premium." 
-           target="_blank" 
-           class="cta-button whatsapp-button">
-           Pregunta por WhatsApp
-        </a>
-
-        <p style="margin-top: 30px; font-size: 0.9em; color: #777;">&copy; 2023 Costura Industrial. Todos los derechos reservados.</p>
+        <section class="contact-section">
+            <h3>¿Tienes Preguntas Antes de Inscribirte?</h3>
+            <p>Nuestro equipo de soporte está listo para ayudarte a resolver cualquier duda sobre el curso o tu inscripción.</p>
+            <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola%2C%20vengo%20de%20la%20pagina%20de%20Costura%20Premium%20y%20quiero%20saber%20mas%20del%20curso." 
+               target="_blank" 
+               class="whatsapp-button">
+                Chatear con un Asesor (WhatsApp)
+            </a>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2023 Costura Industrial. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
