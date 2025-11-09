@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Clase Gratis • Costura Premium — Silvana</title>
-  <meta name="description" content="Clase gratis: aprende a preparar y coser tu primera prenda con resultados profesionales.">
+  <meta name="description" content="Clase gratis online de costura: aprende 60 diseños de blusas y recibe un libro en PDF de patronaje totalmente gratis.">
   <style>
     :root{--pink:#ff2d78;--bg:#fff}
     body{font-family:Inter,system-ui,Arial;background:var(--bg);margin:0;color:#222}
@@ -22,16 +22,19 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Clase gratis: Cómo preparar y coser una prenda que parezca hecha por una profesional</h1>
+      <h1>Clase Gratis Online: Aprende 60 Diseños de Blusas</h1>
     </header>
 
     <section class="hero">
       <div>
-        <p class="small">En 20 minutos te muestro pasos claros, trucos y el error que todas cometen al cortar la tela.</p>
+        <p class="small">
+          Accede a una clase online totalmente gratis donde descubrirás cómo crear y adaptar hasta <strong>60 diseños de blusas</strong> paso a paso.  
+          Además, al registrarte recibirás un <strong>libro PDF gratuito de patronaje</strong> para empezar a coser con precisión profesional.
+        </p>
         <ul>
-          <li>Preparación de la tela</li>
-          <li>Técnicas para costuras limpias</li>
-          <li>Consejo para terminar y ajustar la prenda</li>
+          <li>Aprende las bases del patronaje y costura</li>
+          <li>Trucos para acabados perfectos</li>
+          <li>Diseños adaptables a cualquier talla</li>
         </ul>
 
         <div class="card">
@@ -41,25 +44,25 @@
             <label>Email</label><br/>
             <input name="email" id="email" type="email" required /><br/><br/>
             <input type="hidden" id="source" value="landing_clase_gratis">
-            <button id="submitBtn" class="cta" type="submit">Quiero la clase gratis</button>
-            <p class="small">Solo toma 30 segundos. Prometo no spamearte.</p>
+            <button id="submitBtn" class="cta" type="submit">Registrarme y recibir el libro gratis</button>
+            <p class="small">Solo toma 30 segundos. Recibirás la clase + libro PDF en tu correo.</p>
           </form>
         </div>
       </div>
 
       <div>
-        <!-- Video real embebido desde Google Drive -->
+        <!-- Video embebido de Google Drive -->
         <iframe 
           src="https://drive.google.com/file/d/1PbdrRkbfcbTw8Picqk0VY4d1_xqeYZdh/preview" 
           allow="autoplay; encrypted-media" 
           allowfullscreen>
         </iframe>
-        <p class="small">Minilección + PDF: lista de materiales.</p>
+        <p class="small">Clase online gratuita de Costura Premium.</p>
       </div>
     </section>
 
     <footer style="margin-top:20px" class="small">
-      Si quieres comprar directo: 
+      Si prefieres comprar directo: 
       <a href="https://go.hotmart.com/Y27528309A?ap=f590" target="_blank" class="small">
         Ir a Costura Premium
       </a>
@@ -67,12 +70,12 @@
   </div>
 
   <script>
-    /* Simple submit -> webhook (Zapier/Make/Email provider) */
+    /* Envío simple del formulario */
     document.getElementById('leadForm').addEventListener('submit', async function(e){
       e.preventDefault();
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
-      const FORM_ENDPOINT = "FORM_ENDPOINT"; // <-- luego aquí pondremos tu webhook real
+      const FORM_ENDPOINT = "FORM_ENDPOINT"; // aquí pondremos tu webhook o destino
       try {
         await fetch(FORM_ENDPOINT, {
           method:'POST',
