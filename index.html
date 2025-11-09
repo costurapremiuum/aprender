@@ -70,30 +70,32 @@
   </div>
 
   <script>
-  document.getElementById('leadForm').addEventListener('submit', async function(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const source = document.getElementById('source').value;
+document.getElementById('leadForm').addEventListener('submit', async function(e){
+  e.preventDefault();
 
-    // ✅ Tu enlace de Apps Script (ya creado)
-    const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzxoge_JA8SxrP2mE9cLa4CdLJNlzl1PfWNmIbBmQEQFq_kVKEXDUCDpPluge9vcsoeFw/exec";
+  const name   = document.getElementById('name').value.trim();
+  const email  = document.getElementById('email').value.trim();
+  const source = document.getElementById('source').value || 'landing_clase_gratis';
 
-    try {
-      await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ name, email, source })
-      });
+  const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycby78uBNiCdCLV1_OTLyeIS5JduR684cGkFSgrYA3nRzc31f3KFGMJ7zvSmEoGAamnnVlA/exec";
 
-      // ✅ Redirección después del registro
-      window.location.href = "https://costurapremiuum.github.io/gracias.html";
-    } catch (err) {
-      alert('Ocurrió un error. Intenta de nuevo.');
-      console.error(err);
-    }
-  });
+  try {
+    const body = new URLSearchParams();
+    body.append('name', name);
+    body.append('email', email);
+    body.append('source', source);
+
+    await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: body
+    });
+
+    window.location.href = "https://costurapremiuum.github.io/aprender/gracias.html";
+  } catch (err) {
+    console.error(err);
+    alert('Ocurrió un error. Intenta de nuevo.');
+  }
+});
 </script>
-
 </body>
 </html>
