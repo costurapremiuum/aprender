@@ -77,23 +77,25 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   const email  = document.getElementById('email').value.trim();
   const source = document.getElementById('source').value || 'landing_clase_gratis';
 
-  const FORM_ENDPOINT = https://script.google.com/macros/s/AKfycby78uBNiCdCLV1_OTLyeIS5JduR684cGkFSgrYA3nRzc31f3KFGMJ7zvSmEoGAamnnVlA/exec;
+  // 🔧 Aquí estaban faltando las comillas
+  const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycby78uBNiCdCLV1_OTLyeIS5JduR684cGkFSgrYA3nRzc31f3KFGMJ7zvSmEoGAamnnVlA/exec";
+
   try {
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
     formData.append('source', source);
 
-   await fetch(FORM_ENDPOINT, {
-  method: 'POST',
-  body: formData,
-  mode: 'no-cors'
-});
+    await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    });
 
-// Esperar medio segundo para asegurar que se envíe
-setTimeout(() => {
-  window.location.href = "https://costurapremiuum.github.io/aprender/gracias.html";
-}, 800);
+    // Espera breve antes de redirigir
+    setTimeout(() => {
+      window.location.href = "https://costurapremiuum.github.io/aprender/gracias.html";
+    }, 800);
 
   } catch (err) {
     console.error(err);
