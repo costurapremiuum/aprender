@@ -1,24 +1,89 @@
+<!-- LANDING: clase gratis -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clase Gratis • Costura Premium — Silvana</title>
+  <meta name="description" content="Clase gratis: aprende a preparar y coser tu primera prenda con resultados profesionales.">
+  <style>
+    :root{--pink:#ff2d78;--bg:#fff}
+    body{font-family:Inter,system-ui,Arial;background:var(--bg);margin:0;color:#222}
+    .wrap{max-width:900px;margin:32px auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center}
+    .cta{background:var(--pink);color:white;padding:16px 20px;border-radius:10px;text-decoration:none;display:inline-block}
+    .card{background:#f8f8fb;padding:18px;border-radius:12px}
+    input,button{font-size:16px;padding:12px;border-radius:8px;border:1px solid #ddd;width:100%}
+    .small{font-size:14px;color:#666}
+    iframe{width:100%;height:240px;border-radius:10px;border:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Clase gratis: Cómo preparar y coser una prenda que parezca hecha por una profesional</h1>
+    </header>
 
-<section id="video" class="py-12 bg-gray-100 text-center">
-  <div class="container mx-auto">
-    <h2 class="text-3xl font-bold mb-4">Clase Gratis de Costura Premium</h2>
-    <p class="text-gray-600 mb-6">Aprende cómo crear prendas desde cero con esta clase gratuita 🎬</p>
+    <section class="hero">
+      <div>
+        <p class="small">En 20 minutos te muestro pasos claros, trucos y el error que todas cometen al cortar la tela.</p>
+        <ul>
+          <li>Preparación de la tela</li>
+          <li>Técnicas para costuras limpias</li>
+          <li>Consejo para terminar y ajustar la prenda</li>
+        </ul>
 
-    <div class="aspect-w-16 aspect-h-9 mb-8">
-      <iframe 
-        class="mx-auto rounded-xl shadow-lg" 
-        width="560" 
-        height="315" 
-        src="https://drive.google.com/file/d/1PbdrRkbfcbTw8Picqk0VY4d1_xqeYZdh/preview" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-      </iframe>
-    </div>
+        <div class="card">
+          <form id="leadForm">
+            <label>Tu nombre</label><br/>
+            <input name="name" id="name" required /><br/><br/>
+            <label>Email</label><br/>
+            <input name="email" id="email" type="email" required /><br/><br/>
+            <input type="hidden" id="source" value="landing_clase_gratis">
+            <button id="submitBtn" class="cta" type="submit">Quiero la clase gratis</button>
+            <p class="small">Solo toma 30 segundos. Prometo no spamearte.</p>
+          </form>
+        </div>
+      </div>
 
-    <a href="https://go.hotmart.com/Y27528309A?ap=f590" 
-       target="_blank" 
-       class="inline-block bg-pink-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-pink-600 transition">
-       👉 Accede al curso completo aquí
-    </a>
+      <div>
+        <!-- Video real embebido desde Google Drive -->
+        <iframe 
+          src="https://drive.google.com/file/d/1PbdrRkbfcbTw8Picqk0VY4d1_xqeYZdh/preview" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen>
+        </iframe>
+        <p class="small">Minilección + PDF: lista de materiales.</p>
+      </div>
+    </section>
+
+    <footer style="margin-top:20px" class="small">
+      Si quieres comprar directo: 
+      <a href="https://go.hotmart.com/Y27528309A?ap=f590" target="_blank" class="small">
+        Ir a Costura Premium
+      </a>
+    </footer>
   </div>
-</section>
+
+  <script>
+    /* Simple submit -> webhook (Zapier/Make/Email provider) */
+    document.getElementById('leadForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const FORM_ENDPOINT = "FORM_ENDPOINT"; // <-- luego aquí pondremos tu webhook real
+      try {
+        await fetch(FORM_ENDPOINT, {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({name,email,source:document.getElementById('source').value})
+        });
+        location.href = '/gracias?utm_source=landing&utm_medium=clasegratis';
+      } catch(err) {
+        alert('Ocurrió un error. Intenta de nuevo.');
+      }
+    });
+  </script>
+</body>
+</html>
