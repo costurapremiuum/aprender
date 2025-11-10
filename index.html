@@ -77,7 +77,8 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   const email  = document.getElementById('email').value.trim();
   const source = document.getElementById('source').value || 'landing_clase_gratis';
 
-  const FORM_ENDPOINT = https://script.google.com/macros/s/AKfycbxOLiUqnZ0-GJcDFJ6ImOvKbz3r3zKauUXLuQxaUAtqHIqGEA8dVolz8Xhdb371xxyy/exec;
+  // ✅ CORREGIDO: el link va entre comillas
+  const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxOLiUqnZ0-GJcDFJ6ImOvKbz3r3zKauUXLuQxaUAtqHIqGEA8dVolz8Xhdb371xxyy/exec";
 
   // ✨ Mostrar pantalla de carga
   const loader = document.createElement('div');
